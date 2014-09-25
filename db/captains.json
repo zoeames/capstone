@@ -1,0 +1,39 @@
+{
+  "_id" : {"$oid":"c00000000000000000000001"},
+  "name" : "Jean-Luc Picard",
+  "photo": "assets/img/people/picard.jpg",
+  "birthday" : "July 13, 2305",
+  "origin" : "La Barre, France",
+  "serialNum" : "SP-937-215",
+  "rank" : "Captain",
+  "charm" : 75,
+  "experience" : 100,
+  "intelligence" : 100,
+  "captainHandi": 1
+}
+{
+  "_id" : {"$oid":"c00000000000000000000002"},
+  "name" : "James T. Kirk",
+  "photo": "assets/img/people/kirk.jpg",
+  "birthday" : "March 22, 2233",
+  "origin" : "Iowa, USA",
+  "serialNum" : "SC937-0176CEC",
+  "rank" : "Captain",
+  "charm" : 100,
+  "experience" : 75,
+  "intelligence" : 75,
+  "captainHandi": 1.5
+}
+{
+  "_id" : {"$oid":"c00000000000000000000003"},
+  "name" : "Wesley Crusher",
+  "photo": "assets/img/people/crusher.jpg",
+  "birthday" : "July 29, 2349",
+  "origin" : "USA",
+  "serialNum" : "2367-70",
+  "rank" : "Ensign",
+  "charm" : 5,
+  "experience" : 25,
+  "intelligence" : 75,
+  "captainHandi": 2
+}

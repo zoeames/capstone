@@ -1,0 +1,45 @@
+{
+  "_id" : {"$oid":"a00000000000000000000001"},
+  "name" : "Romulan Warbird",
+  "photo": "assets/img/ships/warbird.jpg",
+  "yearLaunched" : "2293",
+  "Class" : "D'Deridex",
+  "mass" : "4,320,000 Tons",
+  "length" : "1041.13 Meters",
+  "width" : "772.4 Meters",
+  "height" : "285.5 Meters",
+  "weapons" : ["Disruptor Arrays", "Phasers", "Photon Torpedos"],
+  "defense" : ["Deflector Shields", "Cloaking Device"],
+  "propulsion" : ["Impulse Engines", "Warp Drive"],
+  "shipHandi": 1
+}
+{
+  "_id" : {"$oid":"a00000000000000000000002"},
+  "name" : "USS Enterprise-D",
+  "photo": "assets/img/ships/enterprise.jpg",
+  "yearLaunched" : "2363",
+  "Class" : "Galaxy",
+  "mass" : "4,500,000 Tons",
+  "length" : "642.51 Meters",
+  "width" : "463.73 Meters",
+  "height" : "195.26 Meters",
+  "weapons" : ["Phaser Arrays", "Torpedo Launchers", "Antimater Mines"],
+  "defense" : ["Deflector Shields"],
+  "propulsion" : ["Impulse Engines", "Warp Drive"],
+  "shipHandi": 1.5
+}
+{
+  "_id" : {"$oid":"a00000000000000000000003"},
+  "name" : "Shuttlecraft",
+  "photo": "assets/img/ships/shuttlecraft.jpg",
+  "yearLaunched" : "2363",
+  "Class" : "Galaxy",
+  "mass" : "3.75 Tons",
+  "length" : "7 Meters",
+  "width" : "5.4 Meters",
+  "height" : "2.7 Meters",
+  "weapons" : ["Phaser Array"],
+  "defense" : ["Deflector Shields"],
+  "propulsion" : ["Impulse Engines"],
+  "shipHandi": 2
+}

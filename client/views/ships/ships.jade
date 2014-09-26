@@ -1,0 +1,13 @@
+h3 Ships
+
+.row
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th Name
+              th Mass
+          tbody
+            tr(ng-repeat='s in ships')
+              td {{s.name}}
+              td {{s.mass}}
+

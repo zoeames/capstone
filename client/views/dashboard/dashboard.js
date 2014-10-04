@@ -2,7 +2,8 @@
   'use strict';
 
   angular.module('capstone')
-  .controller('HomeCtrl', ['$scope', function($scope){
+  .controller('DashboardCtrl', ['$scope', function($scope){
+
   }]);
 })();
 

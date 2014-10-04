@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('capstone')
-  .controller('HomeCtrl', ['$scope', function($scope){
+  .controller('GameCtrl', ['$scope', function($scope){
   }]);
 })();
 

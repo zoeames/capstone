@@ -32,6 +32,8 @@ module.exports = function(app, express){
 
   app.get('/ships', ships.index);
   app.get('/captains', captains.index);
+  app.get('/dashboard', users.show);
+
   console.log('Express: Routes Loaded');
 };
 

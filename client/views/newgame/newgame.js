@@ -2,7 +2,13 @@
   'use strict';
 
   angular.module('capstone')
-  .controller('GameCtrl', ['$scope', function($scope){
+  .controller('GameCtrl', ['$scope', '$location', function($scope, $location){
+
+    $scope.newGame= function(){
+      $location.path('/ships');
+    };
+
+
   }]);
 })();
 

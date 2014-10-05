@@ -10,6 +10,7 @@ html(ng-app='capstone', lang='en')
     link(href='/vendor/toastr/toastr.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
     link(href='/views/ships/ships.css', rel='stylesheet')
+    link(href='/views/captains/captains.css', rel='stylesheet')
   body
     include nav
     .container
@@ -32,11 +33,13 @@ html(ng-app='capstone', lang='en')
     script(src='/views/register/register.js')
     script(src='/views/login/login.js')
     script(src='/views/logout/logout.js')
-    script(src='/views/ships/ships.js')
     script(src='/views/newgame/newgame.js')
     script(src='/views/dashboard/dashboard.js')
+    script(src='/views/ships/ships.js')
+    script(src='/views/captains/captains.js')
     script(src='/components/factories/home.js')
     script(src='/components/factories/user.js')
     script(src='/components/factories/ship.js')
+    script(src='/components/factories/captain.js')
     script(src='/components/factories/http-interceptor.js')
 

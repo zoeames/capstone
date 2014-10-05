@@ -1,0 +1,21 @@
+h3 Captains
+
+.captain(ng-repeat='c in captains')
+  .name {{c.name}}
+  .photo(style='background-image:url({{c.photo}});')
+  .birthay Birthday: {{c.birthday}}
+  .origin Origin: {{c.origin}}
+  .serialnum Serial Number: {{c.serialNum}}
+  .rank Rank: {{c.rank}}
+  h3 Intelligence:
+  .progress
+    .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: {{c.intelligence}}%;') {{c.intelligence}}
+  h3 Experience:
+  .progress
+    .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: {{c.experience}}%;') {{c.experience}}
+  h3 Charm:
+  .progress
+    .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: {{c.charm}}%;') {{c.charm}}
+  h5 Rating: {{c.score}}
+  button.btn.btn-danger(ng-click='pickCaptain()') Pick Captain
+

@@ -6,9 +6,10 @@
   "origin" : "La Barre, France",
   "serialNum" : "SP-937-215",
   "rank" : "Captain",
-  "charm" : 75,
+  "charm" : 85,
   "experience" : 100,
   "intelligence" : 100,
+  "score": 95,
   "captainHandi": 1
 }
 {
@@ -21,7 +22,8 @@
   "rank" : "Captain",
   "charm" : 100,
   "experience" : 75,
-  "intelligence" : 75,
+  "intelligence" : 50,
+  "score": 75,
   "captainHandi": 1.5
 }
 {
@@ -35,5 +37,6 @@
   "charm" : 5,
   "experience" : 25,
   "intelligence" : 75,
+  "score": 35,
   "captainHandi": 2
 }

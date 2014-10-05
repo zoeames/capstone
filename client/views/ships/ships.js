@@ -11,7 +11,7 @@
     });
 
     $scope.pickShip= function(){
-      $location.path('/dashboard');
+      $location.path('/captains');
     };
 
   }]);

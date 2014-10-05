@@ -30,8 +30,8 @@ module.exports = function(app, express){
   app.use(security.bounce);
   app.delete('/logout', users.logout);
 
-  app.get('/captains', captains.index);
   app.get('/ships', ships.index);
+  app.get('/captains', captains.index);
   console.log('Express: Routes Loaded');
 };
 

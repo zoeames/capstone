@@ -1,13 +1,30 @@
 h3 Ships
 
 .row
-        table.table.table-hover.table-bordered
-          thead
-            tr
-              th Name
-              th Mass
-          tbody
-            tr(ng-repeat='s in ships')
-              td {{s.name}}
-              td {{s.mass}}
+  .ship(ng-repeat='s in ships')
+    .name {{s.name}}
+    .photo(style='background-image:url({{s.photo}});')
+    .row
+      .col-xs-6
+        .yearLaunched Year Launched: {{s.yearLaunched}}
+        .shipClass Class: {{s.class}}
+        .damage Mass: {{s.mass}}
+
+      .col-xs-6
+        .length Length: {{s.length}}
+        .width Width: {{s.width}}
+        .height Height: {{s.height}}
+    h4 Weapons:
+    ol
+      .weapons(ng-repeat='w in s.weapons')
+        li{{w}}
+    h4 Defense:
+    ol
+      .defenses(ng-repeat='d in s.defense')
+        li{{d}}
+    h4 Propulsion:
+    ol
+      .propulsion(ng-repeat='p in s.propulsion')
+        li{{p}}
+    button.btn.btn-danger(ng-click='pickShip()') Pick Ship
 

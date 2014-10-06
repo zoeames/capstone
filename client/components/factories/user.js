@@ -20,7 +20,11 @@
       return $http.get('/dashboard', user);
     }
 
+    function getGameUser(user){
+      return $http.get('/newgame', user);
+    }
 
-    return {register:register, login:login, logout:logout, getUser:getUser};
+
+    return {register:register, login:login, logout:logout, getUser:getUser, getGameUser:getGameUser};
   }]);
 })();

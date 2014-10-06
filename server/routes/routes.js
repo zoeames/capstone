@@ -10,6 +10,7 @@ var morgan         = require('morgan'),
     home           = require('../controllers/home'),
     users          = require('../controllers/users'),
     ships          = require('../controllers/ships'),
+    game           = require('../controllers/game'),
     captains       = require('../controllers/captains');
 
 module.exports = function(app, express){
@@ -33,7 +34,8 @@ module.exports = function(app, express){
   app.get('/ships', ships.index);
   app.get('/captains', captains.index);
   app.get('/dashboard', users.show);
-
+  app.get('/newgame', game.index);
+  app.post('/newgame', game.create);
   console.log('Express: Routes Loaded');
 };
 

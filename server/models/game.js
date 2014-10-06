@@ -2,11 +2,11 @@
 
 var Mongo  = require('mongodb');
 
-function Game(o){
+function Game(id){
   this.creationDate = new Date();
-  this.UserId = Mongo.ObjectID(o.userId);
-  this.captain = o.captain;
-  this.ship = o.ship;
+  this.UserId = Mongo.ObjectID(id);
+  this.captain='';
+  this.ship='';
   this.stats=[];
 }
 
@@ -24,6 +24,11 @@ Game.findByUserId = function(id, cb){
 
 Game.all = function(cb){
   Game.collection.find().toArray(cb);
+};
+
+Game.create = function(userId, cb){
+  var g = new Game(userId);
+  Game.collection.save(g, cb);
 };
 
 module.exports = Game;

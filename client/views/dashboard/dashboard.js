@@ -8,7 +8,8 @@
       $scope.thisUser = response.data.client;
     });
 
-    $scope.changePhoto= function(){
+    $scope.togglePhoto = function(){
+      $scope.showPhoto = !!!$scope.showPhoto;
     };
 
   }]);

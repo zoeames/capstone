@@ -5,18 +5,17 @@ h3 Dashboard
     .about
       .row
         .col-xs-6
-          input(type='text', ng-model='photo', required, ng-minlength='3')
           .userPhoto(style='background-image:url({{thisUser.photo}});')
-          button.btn.btn-sm.btn-danger(ng-click='changePhoto()') Change Photo
+          button.btn.btn-sm.btn-danger(ng-click='togglePhoto()') Edit Photo
+          form(role='form', novalidate, ng-show='showPhoto', name='photoForm')
+            .form-group
+              input.form-control(ng-pattern='/^http/', required, ng-model='thisUser.photo', type='text', name='thisUser.photo')
         .col-xs-6
           h4 User Email:
           h5 {{thisUser.email}}
           &nbsp
           h4 Number of Games played:
           h5 {{thisUser.games.length}}
-      .row
-        .col-xs-12
-          input(type='text', ng-model='photo', required, ng-minlength='3')
   .col-xs-8
     .last
       h1 LAST GAME GRAPH

@@ -8,7 +8,11 @@
       return $http.get('/'+gameId+'/ships');
     }
 
-    return {all:all};
+    function setShip(shipId, gameId){
+      return $http.post('/games/'+gameId+'/ships/' + shipId);
+    }
+
+    return {all:all, setShip:setShip};
   }]);
 })();
 

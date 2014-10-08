@@ -26,5 +26,5 @@ h3 Ships
     ol
       .propulsion(ng-repeat='p in s.propulsion')
         li{{p}}
-    button.btn.btn-danger(ng-click='pickShip()') Pick Ship
+    button.btn.btn-danger(ng-click='pickShip(s._id)') Pick Ship
 

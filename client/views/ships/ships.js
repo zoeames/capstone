@@ -10,10 +10,12 @@
       $scope.ships = response.data.ships;
     });
 
-    $scope.pickShip= function(){
-      $location.path('/'+$routeParams.gameId+'/captains');
+    $scope.pickShip = function(shipId){
+      //alert('Ship Id is'+shipId);
+      Ship.setShip(shipId, $routeParams.gameId).then(function(response){
+        $location.path('/'+$routeParams.gameId+'/captains');
+       });
     };
-
   }]);
 })();
 

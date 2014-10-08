@@ -15,10 +15,9 @@ Object.defineProperty(Game, 'collection', {
 });
 
 Game.findByGameId = function(id, cb){
-  console.log(id);
   var _id = Mongo.ObjectID(id);
-  Game.collection.find({_id:_id}, function(err, game){
-    cb(null, game);
+  Game.collection.findOne({_id:_id}, function(err, aGame){
+    cb(null, aGame);
   });
 };
 
@@ -30,5 +29,12 @@ Game.create = function(userId, cb){
   var g = new Game(userId);
   Game.collection.save(g, cb);
 };
+
+
+Game.assignShip = function(game, ship, cb){
+  game.ship = ship;
+  Game.collection.save(game, cb);
+};
+
 
 module.exports = Game;

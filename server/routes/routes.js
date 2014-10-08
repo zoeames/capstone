@@ -32,6 +32,7 @@ module.exports = function(app, express){
   app.delete('/logout', users.logout);
 
   app.get('/:gameId/ships', ships.index);
+  app.post('/games/:gameId/ships/:shipId', ships.getShip);
   app.get('/:gameId/captains', captains.index);
   app.get('/dashboard', users.show);
   app.get('/newgame', game.index);

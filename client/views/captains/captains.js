@@ -10,8 +10,10 @@
       $scope.captains = response.data.captains;
     });
 
-    $scope.pickCaptain= function(){
-      $location.path('/dashboard');
+    $scope.pickCaptain = function(captainId){
+      Captain.setCaptain(captainId, $routeParams.gameId).then(function(response){
+        $location.path('/dashboard');
+       });
     };
 
   }]);

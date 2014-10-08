@@ -36,5 +36,10 @@ Game.assignShip = function(game, ship, cb){
   Game.collection.save(game, cb);
 };
 
+Game.assignCaptain = function(game, captain, cb){
+  game.captain = captain;
+  Game.collection.save(game, cb);
+};
+
 
 module.exports = Game;

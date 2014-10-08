@@ -8,7 +8,11 @@
       return $http.get('/'+gameId+'/captains');
     }
 
-    return {all:all};
+    function setCaptain(captainId, gameId){
+      return $http.post('/games/'+gameId+'/captains/' + captainId);
+    }
+
+    return {all:all, setCaptain:setCaptain};
   }]);
 })();
 

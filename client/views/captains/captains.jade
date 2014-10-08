@@ -17,5 +17,5 @@ h3 Captains
   .progress
     .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: {{c.charm}}%;') {{c.charm}}
   h5 Rating: {{c.score}}
-  button.btn.btn-danger(ng-click='pickCaptain()') Pick Captain
+  button.btn.btn-danger(ng-click='pickCaptain(c._id)') Pick Captain
 

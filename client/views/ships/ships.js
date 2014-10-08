@@ -2,16 +2,16 @@
   'use strict';
 
   angular.module('capstone')
-  .controller('ShipsCtrl', ['$scope', '$location', 'Ship', function($scope, $location, Ship){
+  .controller('ShipsCtrl', ['$scope', '$location', '$routeParams', 'Ship', function($scope, $location, $routeParams, Ship){
     $scope.ship = {};
     $scope.ships = [];
 
-    Ship.all().then(function(response){
+    Ship.all($routeParams.gameId).then(function(response){
       $scope.ships = response.data.ships;
     });
 
     $scope.pickShip= function(){
-      $location.path('/captains');
+      $location.path('/'+$routeParams.gameId+'/captains');
     };
 
   }]);

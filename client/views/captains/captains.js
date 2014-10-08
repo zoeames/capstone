@@ -2,11 +2,11 @@
   'use strict';
 
   angular.module('capstone')
-  .controller('CaptainsCtrl', ['$scope', '$location', 'Captain', function($scope, $location, Captain){
+  .controller('CaptainsCtrl', ['$scope', '$location', '$routeParams', 'Captain', function($scope, $location, $routeParams, Captain){
     $scope.captain = {};
     $scope.captains = [];
 
-    Captain.all().then(function(response){
+    Captain.all($routeParams.gameId).then(function(response){
       $scope.captains = response.data.captains;
     });
 

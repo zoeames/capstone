@@ -4,8 +4,8 @@
   angular.module('capstone')
   .factory('Ship', ['$http', function($http){
 
-    function all(){
-      return $http.get('/ships');
+    function all(gameId){
+      return $http.get('/'+gameId+'/ships');
     }
 
     return {all:all};

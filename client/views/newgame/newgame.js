@@ -8,11 +8,10 @@
     $scope.newGame = function(){
       Game.create().then(function(response){
         $scope.game = response.data.game;
-        $location.path('/ships');
+        $scope.gameId=$scope.game._id;
+        $location.path('/'+$scope.gameId+'/ships');
       });
     };
-
-
   }]);
 })();
 

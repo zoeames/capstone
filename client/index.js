@@ -10,8 +10,8 @@
     .when('/logout',   {templateUrl:'/views/logout/logout.html',     controller:'LogoutCtrl'})
     .when('/dashboard',   {templateUrl:'/views/dashboard/dashboard.html',     controller:'DashboardCtrl'})
     .when('/newgame',   {templateUrl:'/views/newgame/newgame.html',     controller:'GameCtrl'})
-    .when('/ships',   {templateUrl:'/views/ships/ships.html',     controller:'ShipsCtrl'})
-    .when('/captains',   {templateUrl:'/views/captains/captains.html',     controller:'CaptainsCtrl'})
+    .when('/:gameId/ships',   {templateUrl:'/views/ships/ships.html',     controller:'ShipsCtrl'})
+    .when('/:gameId/captains',   {templateUrl:'/views/captains/captains.html',     controller:'CaptainsCtrl'})
     .otherwise({redirectTo:'/'});
 
     $httpProvider.interceptors.push('HttpInterceptor');

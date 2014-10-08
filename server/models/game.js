@@ -14,11 +14,11 @@ Object.defineProperty(Game, 'collection', {
   get: function(){return global.mongodb.collection('games');}
 });
 
-Game.findByUserId = function(id, cb){
+Game.findByGameId = function(id, cb){
   console.log(id);
   var _id = Mongo.ObjectID(id);
-  Game.collection.find({userId:_id}, function(err, games){
-    cb(null, games);
+  Game.collection.find({_id:_id}, function(err, game){
+    cb(null, game);
   });
 };
 

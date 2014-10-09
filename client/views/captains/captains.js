@@ -12,7 +12,7 @@
 
     $scope.pickCaptain = function(captainId){
       Captain.setCaptain(captainId, $routeParams.gameId).then(function(response){
-        $location.path('/dashboard');
+        $location.path('/'+$routeParams.gameId+'/sun');
        });
     };
 

@@ -8,7 +8,11 @@
       return $http.post('/newgame');
     }
 
+    function gameInfo(gameId, stage){
+      return $http.post('/games/'+gameId+'/stage/' + stage);
+    }
 
-    return {create:create};
+
+    return {create:create, gameInfo:gameInfo};
   }]);
 })();

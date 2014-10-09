@@ -14,3 +14,11 @@ exports.create = function(req, res){
     res.send({game:game});
   });
 };
+
+
+exports.getInfo = function(req, res){
+  Game.findByGameId(req.params.gameId, function(err, myGame){
+    res.send({myGame:myGame});
+ });
+};
+

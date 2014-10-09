@@ -1,0 +1,36 @@
+.row
+  .stats
+    .col-sx-12
+      .col-xs-4
+        .col-xs-6
+          h5 Captain:
+          h5 {{captain}}
+        .col-xs-6
+          h5 Ship:
+          h5 {{ship}}
+      .col-xs-4
+        h5 Health:
+        .progress
+          .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 100%;') 100%
+      .col-xs-4
+        .col-xs-6
+          h5 Star Date:
+        .col-xs-6
+          h5 Days Ellapsed:
+
+
+.row
+  #sunPhoto(style='background-image:url(assets/img/astronomy/sun.jpg);')
+  #shipOrbit
+    #shipPhoto(style='background-image:url({{shipPhoto}});')
+.row
+  .story
+    .row
+      h5 Your new ship has been built in orbit around the Sun; in part to take advantage of the huge amount of power emanating from the surface but also because you will need to use the immense gravitational pull of the sun to slingshot your ship out of the solar system.  You make your way to your new ship via a small transport ship.  Once you have assumed command of your ship and your crew is in place, it is time for you to complete your mission.  Do you want to:
+    .row
+      .col-xs-4
+        button.btn.btn-danger(ng-click='') Get out of here
+      .col-xs-4
+        button.btn.btn-danger(ng-click='') Practice some training maneuvers
+      .col-xs-4
+        button.btn.btn-danger(ng-click='') Study the surface of the sun

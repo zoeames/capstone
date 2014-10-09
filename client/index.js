@@ -13,6 +13,7 @@
     .when('/:gameId/ships',   {templateUrl:'/views/ships/ships.html',     controller:'ShipsCtrl'})
     .when('/:gameId/captains',   {templateUrl:'/views/captains/captains.html',     controller:'CaptainsCtrl'})
     .when('/:gameId/sun',   {templateUrl:'/views/gameViews/sun/sun.html',     controller:'SunCtrl'})
+    .when('/:gameId/asteroid',   {templateUrl:'/views/gameViews/asteroid/asteroid.html',     controller:'AsteroidCtrl'})
     .otherwise({redirectTo:'/'});
 
     $httpProvider.interceptors.push('HttpInterceptor');

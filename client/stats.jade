@@ -1,0 +1,17 @@
+.stats(ng-controller='StatsCtrl')
+  .col-sx-12
+    .col-xs-4
+        h5 Captain:  {{captain}}
+        h5 Ship:  {{ship}}
+    .col-xs-4
+      h5 Health:
+      .progress
+        .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: {{health}}%;') {{health}}%
+    .col-xs-4
+      .col-xs-6
+        h5 Star Date:
+      .col-xs-6
+        h5 Years Ellapsed:
+        h5 {{time}}
+
+&nbsp

@@ -7,7 +7,10 @@ function Game(id){
   this.UserId = Mongo.ObjectID(id);
   this.captain='';
   this.ship='';
-  this.stats=[];
+  this.stats=[{stage:'start', health:100, time:1/365}];
+  this.health = 100;
+  this.time = 1/365;
+  this.stageMessage = '';
 }
 
 Object.defineProperty(Game, 'collection', {
@@ -41,5 +44,13 @@ Game.assignCaptain = function(game, captain, cb){
   Game.collection.save(game, cb);
 };
 
+Game.addStat = function(game, stats, cb){
+  game.health = stats.health;
+  game.time = stats.newTime;
+  game.stageMessage = stats.passMessage;
+  var newStat = {stage:stats.newStage, health:stats.newHealth, time:stats.newTime};
+  game.stats.push(newStat);
+  Game.collection.save(game, cb);
+};
 
 module.exports = Game;

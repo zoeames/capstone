@@ -39,6 +39,7 @@ module.exports = function(app, express){
   app.get('/dashboard', users.show);
   app.get('/newgame', game.index);
   app.post('/newgame', game.create);
+  app.post('/games/:gameId/newStage/:newStage/newHealth/:newHealth/newTime/:newTime/passMessage/:passMessage', game.addStat);
   console.log('Express: Routes Loaded');
 };
 

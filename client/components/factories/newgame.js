@@ -12,7 +12,10 @@
       return $http.post('/games/'+gameId+'/stage/' + stage);
     }
 
+    function addStage(gameId, newStage, newHealth, newTime, passMessage){
+      return $http.post('/games/'+gameId+'/newStage/' + newStage+'/newHealth/'+newHealth +'/newTime/'+newTime+'/passMessage/'+passMessage);
+    }
 
-    return {create:create, gameInfo:gameInfo};
+    return {create:create, gameInfo:gameInfo, addStage:addStage};
   }]);
 })();

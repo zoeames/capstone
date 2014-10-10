@@ -10,6 +10,7 @@
     .when('/logout',   {templateUrl:'/views/logout/logout.html',     controller:'LogoutCtrl'})
     .when('/dashboard',   {templateUrl:'/views/dashboard/dashboard.html',     controller:'DashboardCtrl'})
     .when('/newgame',   {templateUrl:'/views/newgame/newgame.html',     controller:'GameCtrl'})
+    .when('/:gameId/youdied',   {templateUrl:'/views/youdied/youdied.html',     controller:'DiedCtrl'})
     .when('/:gameId/ships',   {templateUrl:'/views/ships/ships.html',     controller:'ShipsCtrl'})
     .when('/:gameId/captains',   {templateUrl:'/views/captains/captains.html',     controller:'CaptainsCtrl'})
     .when('/:gameId/sun',   {templateUrl:'/views/gameViews/sun/sun.html',     controller:'SunCtrl'})

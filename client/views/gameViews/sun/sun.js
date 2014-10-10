@@ -66,7 +66,7 @@
           $scope.newHealth     = 0;
           $scope.newStage      = 'sun';
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
-            $location.path('/'+$routeParams.gameId+'/youDied');
+            $location.path('/'+$routeParams.gameId+'/youdied');
             });
        }
     };

@@ -6,6 +6,7 @@
     $scope.captain = '';
     $scope.ship = '';
     $scope.shipPhoto = '';
+    $scope.distance = 0.000027;   /*in ly*/
 
     $scope.buttonText=[{value:'one', text:'Get out of here'}, {value:'two', text:'Practice Training Maneuvers'}, {value:'three', text:'Study surface of the sun'}];
 
@@ -23,19 +24,14 @@
           var passMessage = 'Your ship travels successfully out of the solar system to begin its journey.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
-            $scope.distance = 0.000027;   /*in ly*/
-              //distace to asteroid belt in meters divided by speed of shuttlecraft (74948114.5).
-            $scope.timeSpentSec  = $scope.distance/$scope.speed;
-              // time spent converted from seconds to years
-            $scope.timeSpentYear = $scope.timeSpentSec/31536000;
-            $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
-            debugger;
-            console.log('cow');
           }else{
-            alert('cow');
+            $scope.speed    = 0.00001245; /* in ly/sec*/
           }
+          $scope.timeSpentSec  = $scope.distance/$scope.speed;
+          $scope.timeSpentYear = $scope.timeSpentSec/31536000;
+          $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           var newHealth     = $scope.health,
-          newStage      = 'sun';
+              newStage      = 'sun';
           Game.addStage($routeParams.gameId, newStage, newHealth, $scope.newTime, passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/asteroid');
             });

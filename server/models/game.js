@@ -45,10 +45,10 @@ Game.assignCaptain = function(game, captain, cb){
 };
 
 Game.addStat = function(game, stats, cb){
-  game.health = stats.newHealth;
-  game.time = stats.newTime;
+  game.health       = parseFloat(stats.newHealth);
+  game.time         = parseFloat(stats.newTime);
   game.stageMessage = stats.passMessage;
-  var newStat = {stage:stats.newStage, health:stats.newHealth, time:stats.newTime};
+  var newStat       = {stage:stats.newStage, health:game.health, time:game.time};
   game.stats.push(newStat);
   Game.collection.save(game, cb);
 };

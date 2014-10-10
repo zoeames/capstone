@@ -24,7 +24,7 @@
   "width" : "464 Meters",
   "height" : "195 Meters",
   "weapons" : ["Phaser Arrays", "Torpedo Launchers", "Antimater Mines"],
-  "defense" : ["Deflector Shields"],
+  "defense" : ["Deflector Shields", ""],
   "propulsion" : ["Impulse Engines", "Warp Drive"],
   "shipHandi": 1.5
 }
@@ -38,8 +38,8 @@
   "length" : "7 Meters",
   "width" : "5 Meters",
   "height" : "3 Meters",
-  "weapons" : ["Phaser Array"],
-  "defense" : ["Deflector Shields"],
-  "propulsion" : ["Impulse Engines"],
+  "weapons" : ["Phaser Array", "", " "],
+  "defense" : ["Deflector Shields", ""],
+  "propulsion" : ["Impulse Engines", ""],
   "shipHandi": 2
 }

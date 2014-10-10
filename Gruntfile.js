@@ -6,14 +6,14 @@ module.exports = function(grunt){
     // ---------------------------------------------------------------------- //
     watch: {
       code: {
-        files: ['Gruntfile.js', 'client/**/*', 'server/**/*'],
+        files: ['Gruntfile.js', 'client/**/*', 'server/**/*', '!client/assets/**/*'],
         tasks: ['build']
       }
     },
     // ---------------------------------------------------------------------- //
     jshint: {
       options: {jshintrc: '.jshintrc', reporter: require('jshint-stylish')},
-      all: ['Gruntfile.js', 'client/**/*.js', 'server/**/*.js']
+      all: ['Gruntfile.js', 'client/**/*.js', 'server/**/*.js', '!client/assets/fonts/startrek_font/specimen_files/easytabs.js']
     },
     // ---------------------------------------------------------------------- //
     jscs: {

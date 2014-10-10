@@ -23,6 +23,7 @@ exports.getInfo = function(req, res){
 };
 
 exports.addStat = function(req, res){
+  console.log('>>>>>>>>REQ.PARAMS   ', req.params);
   Game.findByGameId(req.params.gameId, function(err, myGame){
     Game.addStat(myGame, req.params, function(err, editedGame){
       res.send({editedGame:editedGame});

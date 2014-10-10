@@ -14,9 +14,8 @@
       $scope.captain = response.data.myGame.captain.name;
       $scope.ship = response.data.myGame.ship.name;
       $scope.shipPhoto = response.data.myGame.ship.photo;
-      $scope.health = response.data.myGame.health*1;
-      var stringTime = response.data.myGame.time*1;
-      $scope.time = stringTime.toFixed(2);
+      $scope.health = response.data.myGame.health;
+      $scope.time = response.data.myGame.time.toFixed(2);
       $scope.passMessage = response.data.myGame.stageMessage;
       alert($scope.passMessage);
     });

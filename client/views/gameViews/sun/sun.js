@@ -14,7 +14,7 @@
       $scope.ship = response.data.myGame.ship.name;
       $scope.shipPhoto = response.data.myGame.ship.photo;
       $scope.health = response.data.myGame.health;
-      $scope.time = response.data.myGame.time.toFixed(2);
+      $scope.time = response.data.myGame.time;
     });
 
     $scope.sunChoice = function(choice){
@@ -22,19 +22,24 @@
         case 'one':
           var passMessage = 'Your ship travels successfully out of the solar system to begin its journey.';
           if($scope.ship === 'Shuttlecraft'){
-            var timeSpentSec  = 403914250890/74948114.5,
-                //distace to asteroid belt in meters divided by speed of shuttlecraft (74948114.5).
-                timeSpentYear = timeSpentSec/31536000,
-                // time spent converted from seconds to years
-                newTime       = $scope.time*1+timeSpentYear,
-                newHealth     = $scope.health,
-                newStage      = 'sun';
-              Game.addStage($routeParams.gameId, newStage, newHealth, newTime, passMessage).then(function(response){
-                $location.path('/'+$routeParams.gameId+'/asteroid');
-              });
+            $scope.speed    = 0.000000007922022; /* in ly/sec*/
+            $scope.distance = 0.000027;   /*in ly*/
+              //distace to asteroid belt in meters divided by speed of shuttlecraft (74948114.5).
+            $scope.timeSpentSec  = $scope.distance/$scope.speed;
+              // time spent converted from seconds to years
+            $scope.timeSpentYear = $scope.timeSpentSec/31536000;
+            $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
+            debugger;
+            console.log('cow');
           }else{
-          console.log('not shuttlecraft');
+            alert('cow');
           }
+          var newHealth     = $scope.health,
+          newStage      = 'sun';
+          Game.addStage($routeParams.gameId, newStage, newHealth, $scope.newTime, passMessage).then(function(response){
+            $location.path('/'+$routeParams.gameId+'/asteroid');
+            });
+
           break;
         case 'two':
           alert('button two');

@@ -6,17 +6,18 @@
     $scope.captain = '';
     $scope.ship = '';
     $scope.shipPhoto = '';
+    $scope.health = '';
+    $scope.time = '';
+    $scope.displayTime = '';
 
-    Game.gameInfo($routeParams.gameId, 'sun').then(function(response){
-      debugger;
+    Game.gameInfo($routeParams.gameId, 'start').then(function(response){
       $scope.captain = response.data.myGame.captain.name;
       $scope.ship = response.data.myGame.ship.name;
       $scope.shipPhoto = response.data.myGame.ship.photo;
-      $scope.health = response.data.myGame.health*1;
-      var stringTime = response.data.myGame.time*1;
-      $scope.time = stringTime.toFixed(2);
+      $scope.health = response.data.myGame.health;
+      $scope.time = response.data.myGame.time;
+      $scope.displayTime = $scope.time.toFixed(3);
     });
-
   }]);
 })();
 

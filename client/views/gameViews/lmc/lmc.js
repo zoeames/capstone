@@ -13,7 +13,7 @@
     $scope.distance        = 1250000;   /*in ly*/
 
     $scope.buttonText=[{value:'one', text:'Continue at impulse'}, {value:'two', text:'Travel at max warp'}, {value:'three', text:'Stop and Study'}];
-    Game.gameInfo($routeParams.gameId, 'orion').then(function(response){
+    Game.gameInfo($routeParams.gameId, 'lmc').then(function(response){
       $scope.captain = response.data.myGame.captain.name;
       $scope.ship = response.data.myGame.ship.name;
       $scope.shipPhoto = response.data.myGame.ship.photo;

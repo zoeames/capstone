@@ -2,14 +2,14 @@ include ../../../stats.jade
 
 
 .row
-  #asteroidPhoto(style='background-image:url(assets/img/astronomy/asteroids.jpg);')
+  #asteroidPhoto(style='background-image:url(assets/img/astronomy/omegaCen.jpg);')
   #viewScreen View Screen
 .row
   .story
     .row
-      h5 On your way out of the solar system you encounter the asteroid belt.  You are a little worried about rocks hitting your ship.
+      h5 Having survived the Black hole at the center of the Milkyway Galaxy you find yourself travelling straight out of the galaxy!  Towards the edge of the Milky Way you find yourself in front of an immense ball of stars.
       h5 Do you want to:
     .row
       .choices(ng-repeat='b in buttonText')
         .col-xs-4
-          button.btn.btn-danger(ng-click='asteroidChoice(b.value)') {{b.text}}
+          button.btn.btn-danger(ng-click='omegacenChoice(b.value)') {{b.text}}

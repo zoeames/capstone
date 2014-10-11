@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('capstone')
-  .controller('SagaCtrl', ['$scope', '$location', '$routeParams', 'Game', function($scope, $location, $routeParams, Game){
+  .controller('QCtrl', ['$scope', '$location', '$routeParams', 'Game', function($scope, $location, $routeParams, Game){
 
     $scope.captain         = '';
     $scope.ship            = '';
@@ -10,9 +10,9 @@
     $scope.passMessage     = '';
     $scope.shipHandicap    ='';
     $scope.captainHandicap ='';
-    $scope.newStage      = 'SagA';
-    $scope.distance = 424;   /*in ly*/
-    $scope.buttonText=[{value:'one', text:'Go through the hole'}, {value:'two', text:'Go around the hole'}, {value:'three', text:'Go WAY around the hole'}];
+    $scope.newStage        = 'q';
+    $scope.distance        = 1250000;   /*in ly*/
+    $scope.buttonText=[{value:'one', text:'Arm phasers'}, {value:'two', text:'Backwards at maximum warp'}, {value:'three', text:'Do whatever Q wants'}];
 
     Game.gameInfo($routeParams.gameId, 'saga').then(function(response){
       $scope.captain         = response.data.myGame.captain.name;

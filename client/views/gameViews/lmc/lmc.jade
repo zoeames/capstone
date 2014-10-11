@@ -1,0 +1,15 @@
+include ../../../stats.jade
+
+.row
+  #orionPhoto(style='background-image:url(assets/img/astronomy/magellenic.jpg);')
+  #shipOrbit
+    #shipPhoto(style='background-image:url({{shipPhoto}});')
+.row
+  .story
+    .row
+      h5 Your science officer congratulates you for making it through the huge Globular Cluster Omega Centauri.  The whole bridge cheers as your ship passes through the edge of the milky way!  After a few days of traveling through mostly empty space your ship comes up to the edge of a strange new object.  It doesn't quite look like a star cluster but it also doesn't quite look like a galaxy.
+      h5 Do you want to:
+    .row
+      .choices(ng-repeat='b in buttonText')
+        .col-xs-4
+          button.btn.btn-danger(ng-click='lmcChoice(b.value)') {{b.text}}

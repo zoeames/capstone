@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('capstone')
-  .controller('OrionCtrl', ['$scope', '$location', '$routeParams', 'Game', function($scope, $location, $routeParams, Game){
+  .controller('AndromedaCtrl', ['$scope', '$location', '$routeParams', 'Game', function($scope, $location, $routeParams, Game){
     $scope.captain         = '';
     $scope.ship            = '';
     $scope.shipPhoto       = '';
@@ -36,6 +36,7 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           $scope.newHealth     = $scope.health;
+          $scope.newStage      = 'orion';
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/crab');
             });
@@ -55,6 +56,7 @@
           if($scope.newHealth >=100){
             $scope.newHealth = 100;
           }
+          $scope.newStage      = 'orion';
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/crab');
             });
@@ -71,6 +73,7 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear+7/365;
           $scope.newHealth     = $scope.health;
+          $scope.newStage      = 'orion';
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/crab');
             });

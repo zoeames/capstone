@@ -1,0 +1,15 @@
+include ../../../stats.jade
+
+.row
+  #orionPhoto(style='background-image:url(assets/img/astronomy/andromeda.jpg);')
+  #shipOrbit
+    #shipPhoto(style='background-image:url({{shipPhoto}});')
+.row
+  .story
+    .row
+      h5 Congratulations you finally made it to Starbase Andromeda!!!  Your crew has been sent on shore leave and the starbase has finally received its much needed supplies from your cargo bay.
+      h5 Do you want to:
+    .row
+      .choices(ng-repeat='b in buttonText')
+        .col-xs-4
+          button.btn.btn-danger(ng-click='orionChoice(b.value)') {{b.text}}

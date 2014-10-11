@@ -1,0 +1,15 @@
+include ../../../stats.jade
+
+.row
+  #orionPhoto(style='background-image:url(assets/img/astronomy/orion.jpg);')
+  #shipOrbit
+    #shipPhoto(style='background-image:url({{shipPhoto}});')
+.row
+  .story
+    .row
+      h5 You come upon a big beautifully colored nebula in the sky.  Your sensors don't detect any threats but instead show an abundance of hydrogen and helium.  Researching the region on the computer you determine that you are at the Orion Nebula - a star forming region abundantly rich with gas.
+      h5 Do you want to:
+    .row
+      .choices(ng-repeat='b in buttonText')
+        .col-xs-4
+          button.btn.btn-danger(ng-click='orionChoice(b.value)') {{b.text}}

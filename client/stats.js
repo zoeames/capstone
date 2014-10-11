@@ -9,6 +9,7 @@
     $scope.health      = '';
     $scope.time        = '';
     $scope.displayTime = '';
+    $scope.passMessage = '';
 
     Game.gameInfo($routeParams.gameId, 'start').then(function(response){
       $scope.captain     = response.data.myGame.captain.name;
@@ -17,6 +18,7 @@
       $scope.health      = response.data.myGame.health;
       $scope.time        = response.data.myGame.time;
       $scope.displayTime = $scope.time.toFixed(3);
+      $scope.passMessage = response.data.myGame.stageMessage;
     });
   }]);
 })();

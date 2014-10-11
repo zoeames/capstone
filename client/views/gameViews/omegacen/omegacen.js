@@ -3,14 +3,16 @@
 
   angular.module('capstone')
   .controller('AsteroidCtrl', ['$scope', '$location', '$routeParams', 'Game', function($scope, $location, $routeParams, Game){
-    debugger;
 
     $scope.captain         = '';
     $scope.ship            = '';
     $scope.shipPhoto       = '';
     $scope.passMessage     = '';
-    $scope.shipHandicap    = '';
-    $scope.captainHandicap = '';
+    $scope.shipHandicap    ='';
+    $scope.captainHandicap ='';
+    $scope.newStage      = 'asteroid';
+    $scope.distance = 424;   /*in ly*/
+    $scope.buttonText=[{value:'one', text:'Continue at standard warp'}, {value:'two', text:'Go home'}, {value:'three', text:'Blast the asteroids out of the way'}];
 
     Game.gameInfo($routeParams.gameId, 'asteroid').then(function(response){
       $scope.captain         = response.data.myGame.captain.name;
@@ -20,13 +22,7 @@
       $scope.time            = response.data.myGame.time;
       $scope.shipHandicap    = response.data.myGame.ship.shipHandi;
       $scope.captainHandicap = response.data.myGame.captain.captainHandi;
-      $scope.showMessage     = response.data.myGame.stageMessage;
-      alert($scope.showMessage);
     });
-
-    $scope.newStage        = 'asteroid';
-    $scope.distance        = 424;   /*in ly*/
-    $scope.buttonText      = [{value:'one', text:'Continue at standard warp'}, {value:'two', text:'Go home'}, {value:'three', text:'Blast the asteroids out of the way'}];
 
     $scope.asteroidChoice = function(choice){
       switch(choice){
@@ -41,6 +37,7 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           $scope.newHealth     = $scope.health-(Math.floor(Math.random()*10)+1)*$scope.shipHandicap*$scope.captainHandicap;
+          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/m45');
             });
@@ -50,6 +47,7 @@
           $scope.passMessage = 'You fear the cold luminosity free rocks in front of you. You turn your ship around and return to earth.  You are relieved of your command and spend the rest of your days living alone in the Canadian wilderness.';
           $scope.newTime       = $scope.time*1+$scope.time*1;
           $scope.newHealth     = 0;
+          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/youdied');
             });
@@ -66,6 +64,7 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           $scope.newHealth     = $scope.health-(Math.floor(Math.random()*25)+1)*$scope.shipHandicap*$scope.captainHandicap;
+          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/m45');
             });

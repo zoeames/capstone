@@ -2,14 +2,14 @@ include ../../../stats.jade
 
 
 .row
-  #asteroidPhoto(style='background-image:url(assets/img/astronomy/asteroids.jpg);')
+  #asteroidPhoto(style='background-image:url(assets/img/astronomy/crab.jpg);')
   #viewScreen View Screen
 .row
   .story
     .row
-      h5 On your way out of the solar system you encounter the asteroid belt.  You are a little worried about rocks hitting your ship.
+      h5 The ensign at helm continues to arc your ship along the Milky Way's Orion Arm in hopes of using the huge gravitational center of the Milky Way to slingshot your ship towards the andromeda galaxy.  Suddenly you find yourself being pulled towards a beautiful objects that looks as if it is the remains of something that exploded.  You science officer tells you the object is a supernova remnant and the ship is being pulled in by the strong magnetic field.
       h5 Do you want to:
     .row
       .choices(ng-repeat='b in buttonText')
         .col-xs-4
-          button.btn.btn-danger(ng-click='asteroidChoice(b.value)') {{b.text}}
+          button.btn.btn-danger(ng-click='CrabChoice(b.value)') {{b.text}}

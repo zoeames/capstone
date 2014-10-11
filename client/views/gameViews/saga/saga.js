@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('capstone')
-  .controller('AsteroidCtrl', ['$scope', '$location', '$routeParams', 'Game', function($scope, $location, $routeParams, Game){
+  .controller('SagaCtrl', ['$scope', '$location', '$routeParams', 'Game', function($scope, $location, $routeParams, Game){
 
     $scope.captain         = '';
     $scope.ship            = '';

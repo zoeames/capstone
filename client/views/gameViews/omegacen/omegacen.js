@@ -22,6 +22,8 @@
       $scope.time            = response.data.myGame.time;
       $scope.shipHandicap    = response.data.myGame.ship.shipHandi;
       $scope.captainHandicap = response.data.myGame.captain.captainHandi;
+      $scope.showMessage     = response.data.myGame.stageMessage;
+      alert($scope.showMessage);
     });
 
     $scope.asteroidChoice = function(choice){

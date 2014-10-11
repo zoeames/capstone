@@ -15,6 +15,14 @@
     .when('/:gameId/captains',   {templateUrl:'/views/captains/captains.html',     controller:'CaptainsCtrl'})
     .when('/:gameId/sun',   {templateUrl:'/views/gameViews/sun/sun.html',     controller:'SunCtrl'})
     .when('/:gameId/asteroid',   {templateUrl:'/views/gameViews/asteroid/asteroid.html',     controller:'AsteroidCtrl'})
+    .when('/:gameId/m45',   {templateUrl:'/views/gameViews/m45/m45.html',     controller:'M45Ctrl'})
+    .when('/:gameId/orion',   {templateUrl:'/views/gameViews/orion/orion.html',     controller:'OrionCtrl'})
+    .when('/:gameId/crab',   {templateUrl:'/views/gameViews/crab/crab.html',     controller:'CrabCtrl'})
+    .when('/:gameId/saga',   {templateUrl:'/views/gameViews/saga/saga.html',     controller:'SagaCtrl'})
+    .when('/:gameId/omegacen',   {templateUrl:'/views/gameViews/omegacen/omegacen.html',     controller:'OmegacenCtrl'})
+    .when('/:gameId/lmc',   {templateUrl:'/views/gameViews/lmc/lmc.html',     controller:'LmcCtrl'})
+    .when('/:gameId/q',   {templateUrl:'/views/gameViews/q/q.html',     controller:'QCtrl'})
+    .when('/:gameId/andromeda',   {templateUrl:'/views/gameViews/andromeda/andromeda.html',     controller:'AndromedaCtrl'})
     .otherwise({redirectTo:'/'});
 
     $httpProvider.interceptors.push('HttpInterceptor');

@@ -1,0 +1,15 @@
+include ../../../stats.jade
+
+
+.row
+  #m45Photo(style='background-image:url(assets/img/astronomy/pleiades.jpg);')
+  #viewScreen View Screen
+.row
+  .story
+    .row
+      h5 You have finally made it out of the solar system and find yourself in a big blue cloud of gas filled with large stars.  You check your ships computer and it says you are flying through the Pleiades star cluster.  While staring out the ships windows you realize that you hear a beautiful voice singing.  Then you listen closer and realize you hear more than one voice singing.  Checking the computer you find out that the seven bright stars are not really stars but actually women Zeus turned into birds to flee the great hunter Orion who was chasing them.  Could it be these women who are singing? 
+      h5 Do you want to:
+    .row
+      .choices(ng-repeat='b in buttonText')
+        .col-xs-4
+          button.btn.btn-danger(ng-click='m45Choice(b.value)') {{b.text}}

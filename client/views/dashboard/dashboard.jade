@@ -21,11 +21,15 @@ h3 Dashboard
       h1 LAST GAME GRAPH
 .row
   h1 Game History
-  .allGames
-    .col-xs-2
-      h4 Game #
-      h4 Date
-    .col-xs-10
+  .allGames(ng-repeat='g in thisUser.games.slice().reverse()')
+    .col-xs-12
+      .col-xs-4
+        h4 Game # {{$index + 1}}
+      .col-xs-4
+        h4 Play Date: {{g.creationDate | date:'short'}}
+      .col-xs-4
+        h4 Total Time: {{g.time.toFixed(2)}} years
+    .col-xs-12
       table.table.tabBack
         thead
           tr
@@ -41,7 +45,27 @@ h3 Dashboard
             th Stage 9
             th Stage 10
         tbody
-            tr
-              td Health
-            tr
-              td Time (yrs)
+          tr
+            td Health
+            td {{g.stats[0].health}}
+            td {{g.stats[1].health}}
+            td {{g.stats[2].health}}
+            td {{g.stats[3].health}}
+            td {{g.stats[4].health}}
+            td {{g.stats[5].health}}
+            td {{g.stats[6].health}}
+            td {{g.stats[7].health}}
+            td {{g.stats[8].health}}
+            td {{g.stats[9].health}}
+          tr
+            td Time (yrs)
+            td {{g.stats[0].time.toFixed(3)}}
+            td {{g.stats[1].time.toFixed(3)}}
+            td {{g.stats[2].time.toFixed(3)}}
+            td {{g.stats[3].time.toFixed(3)}}
+            td {{g.stats[4].time.toFixed(3)}}
+            td {{g.stats[5].time.toFixed(3)}}
+            td {{g.stats[6].time.toFixed(3)}}
+            td {{g.stats[7].time.toFixed(3)}}
+            td {{g.stats[8].time.toFixed(3)}}
+            td {{g.stats[9].time.toFixed(3)}}

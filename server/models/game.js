@@ -24,6 +24,12 @@ Game.findByGameId = function(id, cb){
   });
 };
 
+Game.findAllByUserId = function(authorId, cb){
+  authorId = Mongo.ObjectID(authorId);
+  Game.collection.find({UserId:authorId}).toArray(cb);
+};
+
+
 Game.all = function(cb){
   Game.collection.find().toArray(cb);
 };

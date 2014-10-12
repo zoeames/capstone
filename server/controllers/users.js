@@ -1,6 +1,7 @@
 'use strict';
 
-var User = require('../models/user');
+var User = require('../models/user'),
+    Game = require('../models/game');
 
 exports.register = function(req, res){
   User.register(req.body, function(err, user){
@@ -37,6 +38,10 @@ exports.logout = function(req, res){
 
 exports.show = function(req, res){
   User.findById(req.user._id, function(err, client){
-    res.send({client:client});
+    Game.findAllByUserId(req.user._id, function(err, games){
+      client.games = games;
+      console.log(client.games);
+      res.send({client:client});
+    });
   });
 };

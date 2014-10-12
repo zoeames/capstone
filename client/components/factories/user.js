@@ -24,7 +24,11 @@
       return $http.get('/newgame', user);
     }
 
+    function getGames(user){
+      return $http.get('/games', user);
+    }
 
-    return {register:register, login:login, logout:logout, getUser:getUser, getGameUser:getGameUser};
+
+    return {register:register, login:login, logout:logout, getUser:getUser, getGameUser:getGameUser, getGames:getGames};
   }]);
 })();

@@ -29,17 +29,16 @@
     $scope.sagaChoice = function(choice){
       switch(choice){
         case 'one':
-          $scope.passMessage = 'It turns out the hole is actually a supermassive black hole in the center of our galaxy.  Your ship falls in never to be heard from again.';
+          $scope.passMessage = 'Mission Update: It turns out the hole is actually a supermassive black hole in the center of our galaxy.  Your ship falls in never to be heard from again.';
           $scope.newTime       = $scope.time*1;
           $scope.newHealth     = 0;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/youdied');
             });
           break;
 
         case 'two':
-          $scope.passMessage = 'Your ship goes around the hole and your realize the hole is actually a supermassive black hole.  The huge amount of gravity from the supermassive black hole lets you slingshot your ship on its way out of the galaxy.';
+          $scope.passMessage = 'Mission Update: Your ship goes around the hole and your realize the hole is actually a supermassive black hole.  The huge amount of gravity from the supermassive black hole lets you slingshot your ship on its way out of the galaxy.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -49,14 +48,13 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           $scope.newHealth     = $scope.health;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/omegacen');
             });
           break;
 
         case 'three':
-          $scope.passMessage = 'You steer clear of the hole but later realize that it is the supermassive black hole at the center of the galaxy.  You realize you must go back and use it to slingshot yourself out of the galaxy.  The detour costs you three months.';
+          $scope.passMessage = 'Mission Update: You steer clear of the hole but later realize that it is the supermassive black hole at the center of the galaxy.  You realize you must go back and use it to slingshot yourself out of the galaxy.  The detour costs you three months.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -66,7 +64,6 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear+90/365;
           $scope.newHealth     = $scope.health;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/omegacen');
             });

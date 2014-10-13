@@ -26,7 +26,7 @@
     $scope.lmcChoice = function(choice){
       switch(choice){
         case 'one':
-          $scope.passMessage = 'Remembering the last two space objects you encountered (the supermassive black hole and the giant ball of stars) you decide to take it slow through this strange new object.  As you travel through you notice that the dark patches are actually pockets of dark matter which would have caused major problems to your warp drive had you been traveling any faster.';
+          $scope.passMessage = 'Mission Update: Remembering the last two space objects you encountered (the supermassive black hole and the giant ball of stars) you decide to take it slow through this strange new object.  As you travel through you notice that the dark patches are actually pockets of dark matter which would have caused major problems to your warp drive had you been traveling any faster.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -43,7 +43,7 @@
           break;
 
         case 'two':
-          $scope.passMessage = 'You decide to speed through since you have already lost to much time.  You realize to late that the black things flying by are bits of dark matter.  When these hit your ship it causes major damage to your warp coil.';
+          $scope.passMessage = 'Mission Update: You decide to speed through since you have already lost to much time.  You realize to late that the black things flying by are bits of dark matter.  When these hit your ship it causes major damage to your warp coil.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -57,12 +57,12 @@
             $scope.newHealth = 100;
           }
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
-            $location.path('/'+$routeParams.gameId+'/crab');
+            $location.path('/'+$routeParams.gameId+'/q');
             });
           break;
 
         case 'three':
-          $scope.passMessage = 'You spend 6 months orbiting the object so your science can study it.  They are really excited and you then continue on your way at standard warp.';
+          $scope.passMessage = 'Mission Update: You spend 6 months orbiting the object so your science can study it.  They are really excited and you then continue on your way at standard warp.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{

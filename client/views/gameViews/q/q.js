@@ -29,17 +29,16 @@
     $scope.sagaChoice = function(choice){
       switch(choice){
         case 'one':
-          $scope.passMessage = 'You decide to fight!  You arm all your ships weapons and fire. You have a big ship so you should be ok right?  Wrong!  Q gets insulted that you fired on him and destroys your ship and crew.';
+          $scope.passMessage = 'Mission Update: You decide to fight!  You arm all your ships weapons and fire. You have a big ship so you should be ok right?  Wrong!  Q gets insulted that you fired on him and destroys your ship and crew.';
           $scope.newTime       = $scope.time*1;
           $scope.newHealth     = 0;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/youdied');
             });
           break;
 
         case 'two':
-          $scope.passMessage = 'You try all the evasive manuvers in the starfleet handbook and then your try some shady ones that aren\'t in the handbook.  Q keeps up with you the whole time and then puts you and your bridge crew on trial for all of humanities past crimes.  You talk your way out of the predicament and continue traveling at standard warp to your destination, but you have lost three months as his prisoner.';
+          $scope.passMessage = 'Mission Update: You try all the evasive manuvers in the starfleet handbook and then your try some shady ones that aren\'t in the handbook.  Q keeps up with you the whole time and then puts you and your bridge crew on trial for all of humanities past crimes.  You talk your way out of the predicament and continue traveling at standard warp to your destination, but you have lost three months as his prisoner.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -49,14 +48,13 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear+90/365;
           $scope.newHealth     = $scope.health-(Math.floor(Math.random()*10)+1)*$scope.shipHandicap*$scope.captainHandicap;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/andromeda');
             });
           break;
 
         case 'three':
-          $scope.passMessage = 'To decide to submit to whatever Q wants.  As predicted he puts you and your bridge crew on trial for all of humanities past crimes.  You talk your way out of the predicament and continue traveling at standard warp to your destination.  However before you go Q warns that "He will be watching you".';
+          $scope.passMessage = 'Mission Update: To decide to submit to whatever Q wants.  As predicted he puts you and your bridge crew on trial for all of humanities past crimes.  You talk your way out of the predicament and continue traveling at standard warp to your destination.  However before you go Q warns that "He will be watching you".';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -66,7 +64,6 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           $scope.newHealth     = $scope.health;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/andromeda');
             });

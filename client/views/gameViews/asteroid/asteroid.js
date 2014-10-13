@@ -3,7 +3,6 @@
 
   angular.module('capstone')
   .controller('AsteroidCtrl', ['$scope', '$location', '$routeParams', 'Game', function($scope, $location, $routeParams, Game){
-    debugger;
 
     $scope.captain         = '';
     $scope.ship            = '';
@@ -31,7 +30,7 @@
     $scope.asteroidChoice = function(choice){
       switch(choice){
         case 'one':
-          $scope.passMessage = 'You are a starship captain!  You do not fear a field of silly rocks.  You drive your sharship straight through the asteroid belt and...your ship makes it through with minimal damage!';
+          $scope.passMessage = 'Mission Update: You are a starship captain!  You do not fear a field of silly rocks.  You drive your sharship straight through the asteroid belt and...your ship makes it through with minimal damage!';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -47,7 +46,7 @@
           break;
 
         case 'two':
-          $scope.passMessage = 'You fear the cold luminosity free rocks in front of you. You turn your ship around and return to earth.  You are relieved of your command and spend the rest of your days living alone in the Canadian wilderness.';
+          $scope.passMessage = 'Mission Update: You fear the cold luminosity free rocks in front of you. You turn your ship around and return to earth.  You are relieved of your command and spend the rest of your days living alone in the Canadian wilderness.';
           $scope.newTime       = $scope.time*1+$scope.time*1;
           $scope.newHealth     = 0;
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
@@ -56,7 +55,7 @@
           break;
 
         case 'three':
-          $scope.passMessage = 'You use your fancy new phasers to break up some of the rocks.  Unfortunately some of the phaser blasts are deflected off the asteroids and hit your ship.';
+          $scope.passMessage = 'Mission Update: You use your fancy new phasers to break up some of the rocks.  Unfortunately some of the phaser blasts are deflected off the asteroids and hit your ship.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{

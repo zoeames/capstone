@@ -11,7 +11,6 @@
     });
 
     $scope.pickShip = function(shipId){
-      //alert('Ship Id is'+shipId);
       Ship.setShip(shipId, $routeParams.gameId).then(function(response){
         $location.path('/'+$routeParams.gameId+'/captains');
        });

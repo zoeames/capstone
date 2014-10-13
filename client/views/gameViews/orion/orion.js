@@ -26,7 +26,7 @@
     $scope.orionChoice = function(choice){
       switch(choice){
         case 'one':
-          $scope.passMessage = 'You decide to keep moving towards Starbase Andromeda so your ship passes through the cloud of gas at standard warp..';
+          $scope.passMessage = 'Mission Update: You decide to keep moving towards Starbase Andromeda so your ship passes through the cloud of gas at standard warp..';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -42,7 +42,7 @@
           break;
 
         case 'two':
-          $scope.passMessage = 'You stop your ship in the middle of the gas cloud and soak up some of the gas into your ship.  Not only is it a breath of fresh air but your crew all feels a lot better.';
+          $scope.passMessage = 'Mission Update: You stop your ship in the middle of the gas cloud and soak up some of the gas into your ship.  Not only is it a breath of fresh air but your crew all feels a lot better.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -61,7 +61,7 @@
           break;
 
         case 'three':
-          $scope.passMessage = 'Your spend 7 days studying the healing properties of the nebula.  A week\'s worth of data should keep your science officers busy for awhile.';
+          $scope.passMessage = 'Mission Update: Your spend 7 days studying the healing properties of the nebula.  A week\'s worth of data should keep your science officers busy for awhile.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{

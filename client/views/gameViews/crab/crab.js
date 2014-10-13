@@ -29,7 +29,7 @@
     $scope.CrabChoice = function(choice){
       switch(choice){
         case 'one':
-          $scope.passMessage = 'You continue through at max warp and find yourself on a collision course with the pulsar at the center of the supernova explosion.  In a panic your ensign hits the port thruster and your ship miraculously gets slingshotted out of harms way.';
+          $scope.passMessage = 'Mission Update: You continue through at max warp and find yourself on a collision course with the pulsar at the center of the supernova explosion.  In a panic your ensign hits the port thruster and your ship miraculously gets slingshotted out of harms way.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -39,14 +39,13 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           $scope.newHealth     = $scope.health;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/saga');
             });
           break;
 
         case 'two':
-          $scope.passMessage = 'You try to turn around but the magnetic pull of the pulsar is just to strong.  Your efforts cause to much stress on the warp coil which damages your ship.';
+          $scope.passMessage = 'Mission Update: You try to turn around but the magnetic pull of the pulsar is just to strong.  Your efforts cause to much stress on the warp coil which damages your ship.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -56,17 +55,15 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           $scope.newHealth     = $scope.health-(Math.floor(Math.random()*20)+1)*$scope.shipHandicap*$scope.captainHandicap;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/youdied');
             });
           break;
 
         case 'three':
-          $scope.passMessage = 'You call "Abandon Ship".  Your crew and their families get into shuttlecrafts and speed away.  However the shields on the shuttlecrafts are no match for the radiation on the pulsar and everyone dies.';
+          $scope.passMessage = 'Mission Update: You call "Abandon Ship".  Your crew and their families get into shuttlecrafts and speed away.  However the shields on the shuttlecrafts are no match for the radiation on the pulsar and everyone dies.';
           $scope.newTime       = $scope.time*1;
           $scope.newHealth     = 0;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/saga');
             });

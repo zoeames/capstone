@@ -21,7 +21,7 @@
     $scope.sunChoice = function(choice){
       switch(choice){
         case 'one':
-          $scope.passMessage = 'Your ship travels successfully out of the solar system to begin its journey.';
+          $scope.passMessage = 'Mission Update: Your ship travels successfully out of the solar system to begin its journey.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -38,7 +38,7 @@
           break;
 
         case 'two':
-          $scope.passMessage = 'Your ship stays near the sun for a month practicing some training maneuvers.  It then travels at standard warp out of the solar system.';
+          $scope.passMessage = 'Mission Update: Your ship stays near the sun for a month practicing some training maneuvers.  It then travels at standard warp out of the solar system.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -56,7 +56,7 @@
           break;
 
         case 'three':
-          $scope.passMessage = 'You take your ship in closer to the sun to study the surface.  A new ensign mistakenly hits the port thruster which drives your ship into the sun, killing the whole crew.';
+          $scope.passMessage = 'Mission Update: You take your ship in closer to the sun to study the surface.  A new ensign mistakenly hits the port thruster which drives your ship into the sun, killing the whole crew.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{

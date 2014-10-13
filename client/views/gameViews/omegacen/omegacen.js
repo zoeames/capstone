@@ -29,7 +29,7 @@
     $scope.omegacenChoice = function(choice){
       switch(choice){
         case 'one':
-          $scope.passMessage = 'Your great speed and the close proximity of of the stars causes your ship to crash into a small cluster of stars.';
+          $scope.passMessage = 'Mission Update: Your great speed and the close proximity of of the stars causes your ship to crash into a small cluster of stars.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -39,14 +39,13 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear;
           $scope.newHealth     = $scope.health-(Math.floor(Math.random()*20)+1)*$scope.shipHandicap*$scope.captainHandicap;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/lmc');
             });
           break;
 
         case 'two':
-          $scope.passMessage = 'Traveling at impulse speed allows you to avoid hitting any of the stars.  The slow speed also allows your crew to spend some time repairing the warp coil.';
+          $scope.passMessage = 'Mission Update: Traveling at impulse speed allows you to avoid hitting any of the stars.  The slow speed also allows your crew to spend some time repairing the warp coil.';
           $scope.speed    = 0.000000007922022; /* in ly/sec*/
           $scope.timeSpentSec  = $scope.distance/$scope.speed;
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
@@ -55,14 +54,13 @@
           if($scope.newHealth >=100){
             $scope.newHealth = 100;
           }
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/lmc');
             });
           break;
 
         case 'three':
-          $scope.passMessage = 'You travel around the giant ball of stars but it is so massive you lose 6 months.';
+          $scope.passMessage = 'Mission Update: You travel around the giant ball of stars but it is so massive you lose 6 months.';
           if($scope.ship === 'Shuttlecraft'){
             $scope.speed    = 0.000000007922022; /* in ly/sec*/
           }else{
@@ -72,7 +70,6 @@
           $scope.timeSpentYear = $scope.timeSpentSec/31536000;
           $scope.newTime       = $scope.time*1+$scope.timeSpentYear+182/365;
           $scope.newHealth     = $scope.health;
-          alert($scope.newHealth);
           Game.addStage($routeParams.gameId, $scope.newStage, $scope.newHealth, $scope.newTime, $scope.passMessage).then(function(response){
             $location.path('/'+$routeParams.gameId+'/lmc');
             });

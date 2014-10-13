@@ -3,7 +3,7 @@ h3 Ships
 .row
   .ship(ng-repeat='s in ships')
     .name {{s.name}}
-    .shipPhoto(style='background-image:url({{s.photo}});')
+    .shipPhoto(style='background-image:url({{s.photoSquare}});')
     .row
       .col-xs-6
         .yearLaunched Year Launched: {{s.yearLaunched}}

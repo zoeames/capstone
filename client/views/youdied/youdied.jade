@@ -1,4 +1,6 @@
-h1 You Died!
+.grass
+  h1.titlePos You Died!
 
-.row
-  button.btn.btn-lg.btn-danger(ng-click='seeStats()') See Stats!
+  button.btn.btn-lg.btn-danger(ng-click='seeStats()').buttonLoc See Stats!
+  #tombstone(style='background-image:url(assets/img/tombstone.png);')
+  h2.captainName {{captain}}

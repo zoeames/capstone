@@ -1,11 +1,11 @@
-## name of project
+## StarTrek: Journey to Starbase Andromeda
 ### Code Badges
 build status icon
 coverage status icon
 
 ### Screenshots
-![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
-![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/two.jpg)
+![Image1](https://raw.githubusercontent.com/zoeames/capstone/master/docs/screenshots/home.png)
+![Image2](https://raw.githubusercontent.com/zoeames/capstone/master/docs/screenshots/view.png)
 
 ### Description
 write a description about your project
@@ -40,7 +40,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Zoe Ames](https://github.com/zoeames)
 
 ### License
 [MIT](LICENSE)

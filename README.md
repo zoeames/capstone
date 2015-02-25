@@ -31,25 +31,42 @@ AngularJS
 ```
 Bootstrap
 ```
-### Database
+### Models
 ```
-Collecion 1
+User
 ```
-
+* .register
+* .login
+* .fingById
 ```
-Collection 2
+Game
 ```
+* .findByGameId
+* .findAllByUserId
+* .all 
+* .create
+* .assignShip
+* .assignCaptain
+* .addStat
+```
+Captain
+```
+* .findById
+* .all
+```
+Ship
+```
+* .findById
+* .all
 
 ### Features
-- [x] Feature 1
-- [ ] Feature 2
-- [x] Feature 3
-
-### Running Tests
-```bash
-$ npm install
-$ npm test
-```
+- [x] register
+- [x] login
+- [x] logout
+- [ ] update profile
+- [x] start new games
+- [x] view results from previous games
+- [x] calculate time elappsed for each stage
 
 ### Contributors
 - [Zoe Ames](https://github.com/zoeames)

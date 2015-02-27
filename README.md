@@ -1,43 +1,73 @@
 ## StarTrek: Journey to Starbase Andromeda
-### Code Badges
-build status icon
-coverage status icon
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+### Live Version
+Click [HERE](http://startrek.zoeames.com/) to try the live version!
+
+### Description
+A choose-your-own-adventure game based on characters from the StarTrek franchise backed with real physics calculations.  Players choose their captain and ship and then encounter ten stages in an attempt to safely get their ship to starbase Andromeda.
 
 ### Screenshots
 ![Image1](https://raw.githubusercontent.com/zoeames/capstone/master/docs/screenshots/home.png)
 ![Image2](https://raw.githubusercontent.com/zoeames/capstone/master/docs/screenshots/view.png)
 
-### Description
-write a description about your project
 
+### Technologies
+```
+Node
+```
+
+
+```
+Express
+```
+
+```
+MongoDB
+```
+
+```
+AngularJS
+```
+
+```
+Bootstrap
+```
 ### Models
 ```
-Model 1
+User
 ```
-
+* .register
+* .login
+* .fingById
 ```
-Model 2
+Game
 ```
-
-### Database
+* .findByGameId
+* .findAllByUserId
+* .all 
+* .create
+* .assignShip
+* .assignCaptain
+* .addStat
 ```
-Collecion 1
+Captain
 ```
-
+* .findById
+* .all
 ```
-Collection 2
+Ship
 ```
+* .findById
+* .all
 
 ### Features
-- [x] Feature 1
-- [ ] Feature 2
-- [x] Feature 3
-
-### Running Tests
-```bash
-$ npm install
-$ npm test
-```
+- [x] register
+- [x] login
+- [x] logout
+- [ ] update profile
+- [x] start new games
+- [x] view results from previous games
+- [x] calculate time elappsed for each stage
 
 ### Contributors
 - [Zoe Ames](https://github.com/zoeames)

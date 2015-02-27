@@ -2,6 +2,23 @@
   "name": "capstone",
   "version": "0.0.0",
   "description": "Capstone Project",
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "coveralls": "./node_modules/coveralls/bin/coveralls.js"
+  },
+  "scripts": {
+    "test": "mocha test --recursive -R spec --timeout 5000",
+    "watch": "mocha test --recursive -R spec --watch --timeout 5000",
+    "syntax": "./node_modules/grunt-cli/bin/grunt build",
+    "coveralls": "mocha test --recursive -r blanket -R mocha-lcov-reporter | coveralls"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "/app/"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/zoeames/capstone"
@@ -28,6 +45,9 @@
     "underscore": "^1.7.0"
   },
   "devDependencies": {
+    "blanket": "^1.1.6",
+    "chai": "^2.1.0",
+    "coveralls": "^2.11.2",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.6.0",
@@ -37,6 +57,9 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jscs": "^0.7.1",
     "grunt-shell": "^1.1.1",
-    "jshint-stylish": "^1.0.0"
+    "jshint-stylish": "^1.0.0",
+    "mocha": "^2.1.0",
+    "mocha-lcov-reporter": "0.0.2",
+    "supertest": "^0.15.0"
   }
 }

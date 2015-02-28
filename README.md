@@ -1,5 +1,6 @@
 ## StarTrek: Journey to Starbase Andromeda
 [![Build Status](https://travis-ci.org/zoeames/capstone.svg?branch=master)](https://travis-ci.org/zoeames/capstone)
+[![Coverage Status](https://coveralls.io/repos/zoeames/capstone/badge.svg?branch=master)](https://coveralls.io/r/zoeames/capstone?branch=master)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ### Live Version

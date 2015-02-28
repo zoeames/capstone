@@ -16,7 +16,7 @@
   },
   "config": {
     "blanket": {
-      "pattern": "/app/"
+      "pattern": "/server/"
     }
   },
   "repository": {

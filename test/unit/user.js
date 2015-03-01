@@ -28,6 +28,28 @@ describe('User', function(){
         },
       u = new User(o);
       expect(u).to.be.instanceof(User);
+
     });
   });
+
+  describe('.register', function(){
+    it('should regisiter a new user', function(done){
+      User.register({email:'jim@aol.com', password:'1234'}, function(err, user){
+        expect(user.email).to.equal('jim@aol.com');
+        done();
+      });
+    });
+  });
+
+
+
+  describe('.findById', function(){
+    it('should find a user by its id', function(done){
+      User.findById('000000000000000000000001', function(err, user){
+        expect(user.email).to.equal('bob@aol.com');
+        done();
+      });
+    });
+  });
+
 });

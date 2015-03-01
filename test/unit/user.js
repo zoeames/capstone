@@ -40,6 +40,14 @@ describe('User', function(){
       });
     });
   });
+  describe('.login', function(){
+    it('should login a new user', function(done){
+      User.login({email:'bob@aol.com', password:'1234'}, function(err, user){
+        expect(user.email).to.equal('bob@aol.com');
+        done();
+      });
+    });
+  });
 
 
 

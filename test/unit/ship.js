@@ -27,14 +27,24 @@ describe('Ship', function(){
 
     });
   });
-/*
+
   describe('.findById', function(){
-    it('should find a user by its id', function(done){
-      User.findById('000000000000000000000001', function(err, user){
-        expect(user.email).to.equal('bob@aol.com');
+    it('should find a ship by its id', function(done){
+      Ship.findById('a00000000000000000000001', function(err, ship){
+        expect(ship.name).to.equal('Romulan Warbird');
         done();
       });
     });
   });
-*/
+
+  describe('.all', function(){
+    it('should find all ships', function(done){
+      Ship.all(function(err, ships){
+        expect(ships.length).to.equal(3);
+        done();
+      });
+    });
+  });
+
+
 });

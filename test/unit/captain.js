@@ -27,14 +27,21 @@ describe('Captain', function(){
 
     });
   });
-/*
   describe('.findById', function(){
-    it('should find a user by its id', function(done){
-      User.findById('000000000000000000000001', function(err, user){
-        expect(user.email).to.equal('bob@aol.com');
+    it('should find a captain by its id', function(done){
+      Captain.findById('c00000000000000000000001', function(err, captain){
+        expect(captain.name).to.equal('Jean-Luc Picard');
         done();
       });
     });
   });
-*/
+
+  describe('.all', function(){
+    it('should find all captains', function(done){
+      Captain.all(function(err, captains){
+        expect(captains.length).to.equal(3);
+        done();
+      });
+    });
+  });
 });

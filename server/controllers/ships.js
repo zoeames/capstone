@@ -11,6 +11,7 @@ exports.index = function(req, res){
 
 exports.getShip = function(req, res){
   Game.findByGameId(req.params.gameId, function(err, myGame){
+    console.log(myGame);
     Ship.findById(req.params.shipId, function(err, ship){
       Game.assignShip(myGame, ship, function(){
         res.send({myGame:myGame});
@@ -18,4 +19,3 @@ exports.getShip = function(req, res){
    });
  });
 };
-

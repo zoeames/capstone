@@ -65,10 +65,4 @@ describe('Game', function(){
       });
     });
   });
-
-
-
-
-
-
 });

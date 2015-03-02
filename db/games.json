@@ -1,0 +1,52 @@
+{
+  "_id" : {"$oid":"545a5c5504621f0000c17bc4"},
+  "creationDate" : "2014-11-05T17:20:21.696Z",
+  "UserId" : {"$oid":"000000000000000000000001"},
+  "captain" : { "_id" : {"$oid":"c00000000000000000000001"}, "name" : "Jean-Luc Picard", "photo" : "assets/img/people/picard.jpg", "birthday" : "July 13, 2305", "origin" : "La Barre, France", "serialNum" : "SP-937-215", "rank" : "Captain", "charm" : 85, "experience" : 100, "intelligence" : 100, "score" : 95, "captainHandi" : 1 },
+  "ship" : { "_id" : {"$oid":"a00000000000000000000002"}, "name" : "USS Enterprise-D", "photo" : "assets/img/ships/enterprise.jpg", "photoSquare" : "assets/img/ships/enterpriseSquare.jpg", "yearLaunched" : "2363", "class" : "Galaxy", "mass" : "4,500,000 Tons", "length" : "6423 Meters", "width" : "464 Meters", "height" : "195 Meters", "weapons" : [ "Phaser Arrays", "Torpedo Launchers", "Antimater Mines" ], "defense" : [ "Deflector Shields", "" ], "propulsion" : [ "Impulse Engines", "Warp Drive" ], "shipHandi" : 1.5 },
+  "stats" : [ { "stage" : "start", "health" : 100, "time" : 0.0027397260273972603 } ],
+  "health" : 93,
+  "time" : 0.0027397260273972603,
+  "stageMessage" : ""
+}
+
+
+
+{
+  "_id" : {"$oid":"545a5c5504621f0000c17bc5"},
+  "creationDate" : "2014-11-05T17:20:21.696Z",
+  "UserId" : {"$oid":"000000000000000000000001"},
+  "captain" : { "_id" : {"$oid":"c00000000000000000000001"}, "name" : "Jean-Luc Picard", "photo" : "assets/img/people/picard.jpg", "birthday" : "July 13, 2305", "origin" : "La Barre, France", "serialNum" : "SP-937-215", "rank" : "Captain", "charm" : 85, "experience" : 100, "intelligence" : 100, "score" : 95, "captainHandi" : 1 },
+  "ship" : { "_id" : {"$oid":"a00000000000000000000002"}, "name" : "USS Enterprise-D", "photo" : "assets/img/ships/enterprise.jpg", "photoSquare" : "assets/img/ships/enterpriseSquare.jpg", "yearLaunched" : "2363", "class" : "Galaxy", "mass" : "4,500,000 Tons", "length" : "6423 Meters", "width" : "464 Meters", "height" : "195 Meters", "weapons" : [ "Phaser Arrays", "Torpedo Launchers", "Antimater Mines" ], "defense" : [ "Deflector Shields", "" ], "propulsion" : [ "Impulse Engines", "Warp Drive" ], "shipHandi" : 1.5 },
+  "stats" : [ { "stage" : "start", "health" : 100, "time" : 0.0027397260273972603 } ],
+  "health" : 100,
+  "time" : 0.0027397260273972603,
+  "stageMessage" : ""
+}
+
+
+
+{
+  "_id" : {"$oid":"545a5c5504621f0000c17bc6"},
+  "creationDate" : "2014-11-05T17:20:21.696Z",
+  "UserId" : {"$oid":"000000000000000000000002"},
+  "captain" : { "_id" : {"$oid":"c00000000000000000000001"}, "name" : "Jean-Luc Picard", "photo" : "assets/img/people/picard.jpg", "birthday" : "July 13, 2305", "origin" : "La Barre, France", "serialNum" : "SP-937-215", "rank" : "Captain", "charm" : 85, "experience" : 100, "intelligence" : 100, "score" : 95, "captainHandi" : 1 },
+  "ship" : { "_id" : {"$oid":"a00000000000000000000002"}, "name" : "USS Enterprise-D", "photo" : "assets/img/ships/enterprise.jpg", "photoSquare" : "assets/img/ships/enterpriseSquare.jpg", "yearLaunched" : "2363", "class" : "Galaxy", "mass" : "4,500,000 Tons", "length" : "6423 Meters", "width" : "464 Meters", "height" : "195 Meters", "weapons" : [ "Phaser Arrays", "Torpedo Launchers", "Antimater Mines" ], "defense" : [ "Deflector Shields", "" ], "propulsion" : [ "Impulse Engines", "Warp Drive" ], "shipHandi" : 1.5 },
+  "stats" : [ { "stage" : "start", "health" : 100, "time" : 0.0027397260273972603 } ],
+  "health" : 100,
+  "time" : 0.0027397260273972603,
+  "stageMessage" : ""
+}
+
+
+{
+  "_id" : {"$oid":"545a5c5504621f0000c17b34"},
+  "creationDate" : "2014-11-05T17:20:21.696Z",
+  "UserId" : {"$oid":"000000000000000000000002"},
+  "captain" : "",
+  "ship" : "",
+  "stats" : [ { "stage" : "start", "health" : 100, "time" : 0.0027397260273972603 } ],
+  "health" : 100,
+  "time" : 0.0027397260273972603,
+  "stageMessage" : ""
+}
